@@ -77,7 +77,29 @@ function calculateTax(){
            
            
           else if(status == 1) {
-                //INSERT YOUR CODE BELOW
+                if(income<=18650){
+                    tax=income*.10;
+                    taxRate=10;
+                } else if (income <= 75900){
+                    tax = 18650*.1+(income - 18650)*.15;
+                    taxRate = 12;
+                }else if (income <= 153100){
+                    tax = 18650*.1+(75900-18650)*.15+(income-75900)*.25;
+                    taxRate=25;
+                }else if(income <= 233350){
+                    tax = 18650*.1+(75900-18650)*.15+(153100-75900)*.25+(income-153100)*.28;
+                    taxRate=28;
+                }else if(income <= 416700){
+                    tax = 18650*.1+(75900-18650)*.15+(153100-75900)*.25+(233350-153100)*.28+(income-233350)*.33;
+                    taxRate=33;
+                }else if (income <= 470700){
+                    tax = 18650*.1+(75900-18650)*.15+(153100-75900)*.25+(233350-153100)*.28+(416700-233350)*.33+(income-416700)*.35;
+                    taxRate=35;
+                }else if (income>470701){
+                    tax = 18650*.1+(75900-18650)*.15+(153100-75900)*.25+(233350-153100)*.28+(416700-233350)*.33+(470701-416700)*.35+(income-470701)*.396;
+                    taxRate=39.6
+                }//end join filling if/else if loop
+                
   
   
   
@@ -104,7 +126,31 @@ function calculateTax(){
                  
                  
           else if(status == 2) {
-                //INSERT YOUR CODE BELOW
+               if (income<=9325){
+                   tax=income*.10;
+                   taxRate=10;
+               }else if (income<= 37950){
+                   tax= 9325*.10+(income-9325)*.15;
+                   taxRate=15;
+               }else if (income<= 76550){
+                   tax= 9325*.10+(37950-9325)*.15+(income-37950)*.25;
+                   taxRate=25;
+               }else if (income<= 116675){
+                   tax= 9325*.10+(37950-9325)*.15+(76550-37950)*.25+(income-76550)*.28;
+                   taxRate=28;
+               }else if (income<= 208350){
+                   tax= 9325*.10+(37950-9325)*.15+(76550-37950)*.25+(116675-76550)*.28+(income-116675)*.33;
+                   taxRate=33;
+               }else if (income<= 235350){
+                   tax= 9325*.10+(37950-9325)*.15+(76550-37950)*.25+(116675-76550)*.28+(208350-116675)*.33+(income-208350)*.35;
+                   taxRate=35;
+               }else if (income > 235351){
+                   tax= 9325*.10+(37950-9325)*.15+(76550-37950)*.25+(116675-76550)*.28+(208350-116675)*.33+(235351-208350)*.35+(income-235351)*.396;
+                   taxRate=39.6;
+               }
+               
+               
+               
 
              
              
@@ -129,7 +175,31 @@ function calculateTax(){
           
           
           else if(status == 3) {
-                //INSERT YOUR CODE BELOW
+            if (income<=13350){
+                   tax=income*.10;
+                   taxRate=10;
+               }else if (income<= 50800){
+                   tax= 13350*.10+(income-13350)*.15;
+                   taxRate=15;
+               }else if (income<= 131200){
+                   tax= 13350*.10+(50800-13350)*.15+(income-50800)*.25;
+                   taxRate=25;
+               }else if (income<= 212500){
+                   tax= 13350*.10+(50800-13350)*.15+(131200-50800)*.25+(income-131200)*.28;
+                   taxRate=28;
+               }else if (income<= 416700){
+                   tax= 13350*.10+(50800-13350)*.15+(131200-50800)*.25+(212500-131200)*.28+(income-212500)*.33;
+                   taxRate=33;
+               }else if (income<= 444550){
+                   tax= 13350*.10+(50800-13350)*.15+(131200-50800)*.25+(212500-131200)*.28+(416700-212500)*.33+(income-416700)*.35;
+                   taxRate=35;
+               }else if (income > 444551){
+                   tax= 13350*.10+(50800-13350)*.15+(131200-50800)*.25+(212500-131200)*.28+(416700-212500)*.33+(income-416700)*.35+(income-444551)*.396;
+                   taxRate=39.6;
+               }
+            
+            
+            
  
  
 
@@ -201,6 +271,8 @@ function clearButton () {
               document.getElementById("filingStatus").selectedIndex = 0;
               
              //INSERT YOUR CODE BELOW
+             document.getElementById("taxEstimate").innerHTML = " ";
+             document.getElementById("taxBracket").innerHTML = " ";
 
 
 

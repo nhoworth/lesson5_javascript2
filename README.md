@@ -4,20 +4,19 @@
 Web Application Development
 
 ### Assignment Date:  
-(Month Day, Year)
+Febreuary 21 2018
 
 ### Student Name:  
-(First and Last Name)
+Nicholas Howorth
 
 ### Project Description:
-(In your own words, briefly describe the assignment.)
+Finished the js logic for a new tax rate calulator
 
 ### View Project:
-(Replace this statement with your Github Page URL that was created when you 
- published the project.)
+https://nhoworth.github.io/lesson5_javascript2/
 
 ### Lessons Learned in the Assignment:
-1. (Briefly describe a lesson/concept learned in this lesson.)
-2. (Briefly describe a lesson/concept learned in this lesson.)
-3. (Briefly describe a lesson/concept learned in this lesson.)
+1. When dealing with waterfall style step function calcuations, copy/paste is your bestfriend. I spent an hour just to realize I made a careless typo.
+2. .innerHTML/.value/.selectedIndex are all things I need more practice with. I am spending way too long figuring out when to use each.
+3. I really wish I took the time to learn git a while ago. I delete/remake repositories way too often and it is getting tedious. 
 
